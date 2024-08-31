@@ -2145,21 +2145,51 @@ video {
 
 /* Parallax Background */
 .parallax-background {
-    position: relative;
-    overflow: hidden;
+	position: fixed; /* Fixed to the viewport */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh; /* Full viewport height */
+	z-index: -1; /* Behind all content */
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.parallax-background::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-attachment: fixed;
+	background-size: cover;
+	z-index: 0;
+	opacity: 0.5;
 }
 
-.parallax-background::before {
-    content: '';
-    position: absolute;
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2); /* Adjust scale value as needed */
+    }
+}
+
+.randomized-background {
+    position: fixed; /* Keeps it fixed to the viewport */
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-attachment: fixed;
+    height: 100vh; /* Full viewport height */
+	z-index: -1;
     background-size: cover;
-    z-index: 0;
-    opacity: 0.5;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 2s ease-in-out; /* Smooth fade transitions */
+    opacity: 0.5; /* Start with hidden background */
+	animation: zoomIn 30s infinite; /* Adjust duration and type of animation */
 }
 
 /* Header */
