@@ -2059,6 +2059,19 @@ input, select, textarea {
 	opacity: 0.8;
 }
 
+.loading-indicator {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 9999; /* Make sure it’s on top */
+}
+
 /* Image Container */
 
 .image-container {
