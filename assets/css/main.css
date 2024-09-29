@@ -2059,18 +2059,18 @@ input, select, textarea {
 	opacity: 0.8;
 }
 
-.loading-indicator {
-    position: absolute;
+#loading-indicator {
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 16px;
-    color: white; /* You can change the color if needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
-    padding: 5px 10px;
-    border-radius: 5px;
-    z-index: 1;
-    display: none; /* Hidden by default */
+    font-size: 24px;
+    color: white; /* Change to desired color */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: background for visibility */
+    padding: 10px 20px; /* Optional: padding around text */
+    border-radius: 5px; /* Optional: rounded corners */
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Ensure it's on top */
 }
 
 /* Image Container */
