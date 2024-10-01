@@ -1459,8 +1459,6 @@ input, select, textarea {
 		border: 0;
 		padding: 0.75em 1em;
 		font-size: 1em;
-		border-radius: 5px;
-		border: solid 1px #dddddd;
 		background: #fff;
 		width: 100%;
 	}
@@ -1475,7 +1473,15 @@ input, select, textarea {
 
 	form textarea {
 		height: 15em;
+		resize:none;
 	}
+
+	.form-row {
+		display: flex; /* Flexbox for aligning items in a row */
+		justify-content: space-between; /* Space between the inputs */
+		gap: 20px; /* Adds spacing between the input fields */
+	}
+	
 
 	form ::-webkit-input-placeholder {
 		color: #555 !important;
@@ -2181,23 +2187,19 @@ input, select, textarea {
 }
 
 .contact-form {
-	max-width: 600px;
+	max-width: 800px;
 	margin: 0 auto;
-	padding: 20px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
+	
 }
 
 .contact-form input,
 .contact-form textarea {
 	width: 100%;
 	padding: 10px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
-.contact-form button {
-	padding: 10px 15px;
-}
+
 
 /* Video Container */
 
