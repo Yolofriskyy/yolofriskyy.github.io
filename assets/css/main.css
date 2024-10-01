@@ -2361,6 +2361,26 @@ video {
 #main {
     position: relative;
     padding: 4em 0;
+	transition: transform 0.4s ease;
+    transform: translateX(0);
+	visibility: hidden;
+}
+
+#main.start-offscreen-left {
+    transform: translateX(-100vw); /* Starts offscreen on the right */
+}
+
+#main.start-offscreen-right {
+    transform: translateX(100vw); /* Starts offscreen on the right */
+}
+
+/* Slide in to the center */
+#main.slide-in {
+    transform: translateX(0); /* Moves to the center */
+}
+
+#main.visible {
+    visibility: visible; /* Show the section when ready */
 }
 
 /* Footer */
