@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
   // Select all elements with the class 'parallax-background'
   var parallaxElements = document.querySelectorAll('.parallax-background');
@@ -35,7 +34,7 @@ if (randomizedBackground) {
         "../../images/FinishLine.png",
         "../../images/Koth_Quarry3.jpg"
     ];
-
+    
     var currentImageUrl = '';
 
     function getRandomImage() {
@@ -64,7 +63,7 @@ if (randomizedBackground) {
 
                 randomizedBackground.style.backgroundImage = `url(${imageUrl})`;
                 randomizedBackground.style.opacity = 0.5; // Fade in new
-            }, 2000); // Match duration with CSS transition
+            }, 500); // Match duration with CSS transition
         };
 
         currentImageUrl = imageUrl;
@@ -73,7 +72,6 @@ if (randomizedBackground) {
             console.error(`Failed to load image: ${imageUrl}`);
         };
     }
-
     // Initial call and interval for updates
     updateRandomBackgroundImage();
     setInterval(updateRandomBackgroundImage, 10000); // Change every 10 seconds

@@ -2287,7 +2287,7 @@ video {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: opacity 2s ease-in-out; /* Smooth fade transitions */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade transitions */
     opacity: 0.5; /* Start with hidden background */
 	animation: zoomIn 30s infinite; /* Adjust duration and type of animation */
 }
