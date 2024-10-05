@@ -1577,9 +1577,14 @@ input, select, textarea {
 	.header-content {
 		display: flex; /* Align items horizontally */
 		align-items: flex-start; /* Align vertically in the middle */
-		gap: 14.5em; /* Adds space between the title and image */
+		flex-wrap: nowrap;
 	}
 	
+	.header-content .image-wrapper {
+		flex-shrink: 0;              
+		max-width: 200px;
+	}
+
 	/* Image wrapper inside the header */
 	/* Optional: adjust the image size only for this section */
 	.header-content .image-wrapper img {
@@ -1590,7 +1595,9 @@ input, select, textarea {
 	}
 	
 	.header-content h2 {
-		margin: 0; /* Remove margin from the h2 element for better alignment */
+		margin: 0 5em 0 0;          /* Add right margin for spacing to the image */
+    	flex-grow: 1;                /* Allow the text to grow and occupy remaining space */
+		min-width: 150px;  
 	}
 
 /* Box */
@@ -2635,7 +2642,7 @@ video {
 			}
 
 			.header-content {
-				gap: 11em;
+				
 			}
 
 			.header-content .image-wrapper {
@@ -3018,7 +3025,7 @@ video {
 			}
 
 			.header-content {
-				gap: 9em;
+				
 			}
 
 			.header-content .image-wrapper {
