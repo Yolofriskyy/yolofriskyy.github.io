@@ -1596,8 +1596,7 @@ input, select, textarea {
 	
 	.header-content h2 {
 		margin: 0 5em 0 0;          /* Add right margin for spacing to the image */
-    	flex-grow: 1;                /* Allow the text to grow and occupy remaining space */
-		min-width: 150px;  
+    	flex-grow: 1;                /* Allow the text to grow and occupy remaining space */ 
 	}
 
 /* Box */
@@ -2641,10 +2640,6 @@ video {
 				font-size: 0.9em;
 			}
 
-			.header-content {
-				
-			}
-
 			.header-content .image-wrapper {
 				width: 150px;
 				height: 150px;
@@ -3024,9 +3019,6 @@ video {
 				padding: 20px 0;
 			}
 
-			.header-content {
-				
-			}
 
 			.header-content .image-wrapper {
 				width: 100px;
@@ -3040,4 +3032,11 @@ video {
 				padding: 40px 0 20px 0;
 			}
 
+	}
+
+/*/PhoneSize/*/
+	@media screen and (max-width: 450px) {
+		.header-content h2 {
+			margin: 0 3em 0 0;
+		}
 	}
