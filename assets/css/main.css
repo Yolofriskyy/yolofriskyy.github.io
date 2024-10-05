@@ -1574,6 +1574,25 @@ input, select, textarea {
 		margin: 2.25em 0 0 0;
 	}
 
+	.header-content {
+		display: flex; /* Align items horizontally */
+		align-items: flex-start; /* Align vertically in the middle */
+		gap: 14.5em; /* Adds space between the title and image */
+	}
+	
+	/* Image wrapper inside the header */
+	/* Optional: adjust the image size only for this section */
+	.header-content .image-wrapper img {
+		width: 100%;               /* Make the image take full width of its wrapper */
+    	height: auto;              /* Maintain aspect ratio */
+    	max-width: 200px;
+		max-height: 200px;
+	}
+	
+	.header-content h2 {
+		margin: 0; /* Remove margin from the h2 element for better alignment */
+	}
+
 /* Box */
 
 	.box {
@@ -2356,7 +2375,7 @@ video {
     color: #ffffff !important;
     font-weight: 700;
 }
-
+		
 /* Main */
 #main {
     position: relative;
@@ -2494,6 +2513,7 @@ video {
 			#main {
 				padding: 30px 0;
 			}
+			
 
 		/* Footer */
 
@@ -2553,7 +2573,15 @@ video {
 		/* Header */
 
 			#header {
-				padding: 3.5em 0 3em 0;
+				padding: 3em 0 2.5em 0;
+			}
+
+			#header h1 {
+				color: #ffffff;
+				font-weight: 900;
+				margin: 0 auto;
+				font-size: 1.75em;
+				letter-spacing: -0.035em;
 			}
 
 		/* Nav */
@@ -2600,6 +2628,20 @@ video {
 
 			#main {
 				padding: 40px 0;
+			}
+
+			.overlay {
+				font-size: 0.9em;
+			}
+
+			.header-content {
+				gap: 11em;
+			}
+
+			.header-content .image-wrapper {
+				width: 150px;
+				height: 150px;
+
 			}
 
 		/* Copyright */
@@ -2664,20 +2706,20 @@ video {
 						content: '\f0c9';
 						display: block;
 						position: absolute;
-						left: 10px;
-						top: 10px;
+						left: 35px;
+						top: 20px;
 						width: 50px;
 						height: 40px;
 						line-height: 40px;
 						font-size: 18px;
 						color: #fff;
 						text-align: center;
-						background: rgba(150, 150, 150, 0.75);
+						background: #d52349;
 						border-radius: 5px;
 					}
 
 					#titleBar .toggle:active:before {
-						background-color: #969696;
+						background-color: #b92545;
 					}
 
 			#navPanel {
@@ -2785,6 +2827,10 @@ video {
 
 			h2, h3, h4, h5, h6 {
 				font-size: 1.25em;
+			}
+
+			.overlay {
+				font-size: 0.65em;
 			}
 
 		/* Button */
@@ -2922,6 +2968,7 @@ video {
 				#header h1 {
 					color: #ffffff;
 					font-weight: 900;
+					margin: 0 auto;
 					font-size: 1.75em;
 					letter-spacing: -0.035em;
 				}
@@ -2968,6 +3015,16 @@ video {
 
 			#main {
 				padding: 20px 0;
+			}
+
+			.header-content {
+				gap: 9em;
+			}
+
+			.header-content .image-wrapper {
+				width: 100px;
+				height: 100px;
+
 			}
 
 		/* Footer */
