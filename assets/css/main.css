@@ -2168,6 +2168,14 @@ input, select, textarea {
 	display: block;
 }
 
+.image-wrapper[data-colspan] {
+    grid-column: span attr(data-colspan);
+}
+
+.image-wrapper[data-rowspan] {
+    grid-row: span attr(data-rowspan);
+}
+
 .image-wrapper:hover img {
     transform: scale(1.05);
 }
