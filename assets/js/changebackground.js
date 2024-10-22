@@ -50,6 +50,9 @@ if (randomizedBackground) {
 
         img.onload = function () {
             randomizedBackground.style.opacity = 0; // Fade out current
+            parallaxElements.forEach(function(parallax) {
+                parallax.style.opacity = 1; // Show the parallax background
+            });
 
             setTimeout(function () {
                 randomizedBackground.style.animation = 'none'; // Stop the animation
@@ -58,12 +61,15 @@ if (randomizedBackground) {
                 randomizedBackground.style.animation = ''; // Reapply the animat
 
                 randomizedBackground.style.backgroundImage = `url(${imageUrl})`;
-                randomizedBackground.style.opacity = 0.5; // Fade in new
-            }, 500); // Match duration with CSS transition
+                randomizedBackground.style.opacity = 0.6; // Fade in new
+                parallaxElements.forEach(function(parallax) {
+                    parallax.style.opacity = 0; // Show the parallax background
+                });
+        
+            }, 800); // Match duration with CSS transition
         };
-
+        
         currentImageUrl = imageUrl;
-
         img.onerror = function () {
             console.error(`Failed to load image: ${imageUrl}`);
         };

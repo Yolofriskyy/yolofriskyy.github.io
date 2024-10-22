@@ -2284,6 +2284,7 @@ video {
 	width: 100%;
 	height: 100vh; /* Full viewport height */
 	z-index: -1; /* Behind all content */
+	transition: opacity 0.8s ease-in-out; /* Smooth fade transitions */
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -2298,7 +2299,7 @@ video {
 	background-attachment: fixed;
 	background-size: cover;
 	z-index: 0;
-	opacity: 0.5;
+	opacity: 0.6;
 }
 
 @keyframes zoomIn {
@@ -2320,8 +2321,8 @@ video {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: opacity 0.5s ease-in-out; /* Smooth fade transitions */
-    opacity: 0.5; /* Start with hidden background */
+    transition: opacity 0.8s ease-in-out; /* Smooth fade transitions */
+    opacity: 0.6; /* Start with hidden background */
 	animation: zoomIn 30s infinite; /* Adjust duration and type of animation */
 }
 
