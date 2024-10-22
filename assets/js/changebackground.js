@@ -27,13 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
 var randomizedBackground = document.querySelector('.randomized-background');
 
 if (randomizedBackground) {
-    var images = [
-        "../../images/FinishLinebg.png",
-        "../../images/CaptureCorpBgImage.png",
-        "../../images/Koth_QuarryTexturedAndMeshed1.jpg",
-        "../../images/FinishLine.png",
-        "../../images/Koth_Quarry3.jpg"
-    ];
+    var images = randomizedBackground.getAttribute('data-images').split(',').map(function(img) {
+        return img.trim();
+    });
     
     var currentImageUrl = '';
 
