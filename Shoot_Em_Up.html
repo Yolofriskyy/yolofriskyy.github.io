@@ -16,6 +16,11 @@
 		<div id="loading-indicator">Loading...</div>
 		<div id="content-wrapper">
 			<div id="page-wrapper">
+				<style>
+					.custom-color {
+						color: #d52349;
+					}
+				</style>
 
 				<!-- Header -->
 					<section id="header">
@@ -57,7 +62,12 @@
 											<header>
 												<h3 class="text-centered">Core mechanics</h3>
 											</header>
-										
+										</section>
+
+										<section>
+											<header>
+												<h1 class="text-centered">Physics based movement via coroutines</h1>
+											</header>
 											<div class="gif-container">
 												<div class="gif-wrapper">
 													<img src="gifs/FluidMovement.gif" loading="lazy" alt="GIF">
@@ -66,9 +76,14 @@
 													</div>
 												</div>
 											</div>
+											<p></p>
+											<p>Apart from platform generation, most of the code in this project doesn’t need to run every frame. Specifically, code like player movement is designed to update frame-by-frame only when the player executes an input direction. To improve performance, I’ve implemented coroutines instead of relying on condition checks in the update function.</p>
 										</section>
 
 										<section>
+											<header>
+												<h1 class="text-centered">Multidirectional randomized platform generation</h1>
+											</header>
 											<div class="gif-container">
 												<div class="gif-wrapper">
 													<img src="gifs/MultiRandomPlat.gif" loading="lazy" alt="GIF">
@@ -77,8 +92,25 @@
 													</div>
 												</div>
 											</div>
+											<p></p>
+											<b><span class="custom-color">How it works</span></b>
+											<p>Three platforms randomly chosen from an array of premade platforms are always present as the character is moving, one to the left, middle and right of the character. Player distance is measured from a point (spawn point), after a certain amount of units + other factors travelled, a platform is instantiated in the direction of the outermost platform; for example if the player travels from the middle platform to the right platform, once distance is met a new platform will spawn in that direction.</p>
+											<p>Other factors such as distance between each platform, player height and platform index are also taken into account before a new platform is generated.</p>
+											<p></p>
+											<div class="gif-container">
+												<div class="gif-wrapper">
+													<img src="gifs/PlatformGenBehindScenes.gif" loading="lazy" alt="GIF">
+													<div class="overlay">
+														<p>Multidirectional randomized platform generation</p>
+													</div>
+												</div>
+											</div>
 										</section>
+
 										<section>
+											<header>
+												<h1 class="text-centered">Death wall event</h1>
+											</header>
 											<div class="gif-container">
 												<div class="gif-wrapper">
 													<img src="gifs/DeathWallEvent.gif" loading="lazy" alt="GIF">
@@ -87,8 +119,15 @@
 													</div>
 												</div>
 											</div>
+											<p></p>
+											<p>As the player progresses, world events randomly take place. Moving death wall forces the player to move the opposite direction, showcasing the need to move and generate platforms in both directions. The players goal is to achieve the furthest distance possible, death wall counteracts that as moving the opposite direction subtracts from the players current distance</p>
+											<p>The further the distance travelled, the faster the death wall gets. Players need to make use of the speed multiplier from killing obstacles, so they can outrun the death wall at further distances.</p>
 										</section>
+
 										<section>
+											<header>
+												<h1 class="text-centered">Speed kill multiplier</h1>
+											</header>
 											<div class="gif-container">
 												<div class="gif-wrapper">
 													<img src="gifs/ShootMultiplier.gif" loading="lazy" alt="GIF">
@@ -97,6 +136,8 @@
 													</div>
 												</div>
 											</div>
+											<p></p>
+											<p>Each enemy kill grants a speed stack, adding 0.1x to the player’s base speed. The multiplier bar (displayed on the right) then begins to deplete exponentially, removing one stack at a time until the multiplier resets to 1x. A new kill refills the bar and resets its depletion rate.</p>
 										</section>
 									</article>
 							</div>
