@@ -2123,7 +2123,7 @@ input, select, textarea {
 .gif-wrapper img {
     width: 100%;
 	object-fit: cover;
-	max-height: 500px;
+	max-height: 520px;
 	display:block;
 }
 
