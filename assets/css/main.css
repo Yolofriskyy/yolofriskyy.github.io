@@ -2299,7 +2299,7 @@ video {
 	background-attachment: fixed;
 	background-size: cover;
 	z-index: 0;
-	opacity: 0.6;
+	opacity: 0.5;
 }
 
 @keyframes zoomIn {
@@ -2322,7 +2322,7 @@ video {
     background-position: center;
     background-repeat: no-repeat;
     transition: opacity 0.8s ease-in-out; /* Smooth fade transitions */
-    opacity: 0.6; /* Start with hidden background */
+    opacity: 0.5; /* Start with hidden background */
 	animation: zoomIn 30s infinite; /* Adjust duration and type of animation */
 }
 

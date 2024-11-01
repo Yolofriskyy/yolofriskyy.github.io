@@ -61,7 +61,7 @@ if (randomizedBackground) {
                 randomizedBackground.style.animation = ''; // Reapply the animat
 
                 randomizedBackground.style.backgroundImage = `url(${imageUrl})`;
-                randomizedBackground.style.opacity = 0.6; // Fade in new
+                randomizedBackground.style.opacity = 0.5; // Fade in new
                 parallaxElements.forEach(function(parallax) {
                     parallax.style.opacity = 0; // Show the parallax background
                 });
