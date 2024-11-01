@@ -52,6 +52,15 @@
 												<iframe src="https://www.youtube.com/embed/oYM9LLF2yr0?autoplay=1&mute=0" frameborder="0" allow="autoplay; fullscreen"></iframe> 
 											</div>
 										</section>
+
+										<section>
+											<header>
+												<h3 class="text-centered">Solo gameplay</h3>
+											</header>
+											<div class="youtube-video-container">
+												<iframe src="https://www.youtube.com/embed/A_70BuZ4zyg" frameborder="0" allow="fullscreen"></iframe> 
+											</div>
+										</section>
 										
 										<section>
 											<header>
@@ -83,12 +92,41 @@
 												</div>
 											</div>
 										</section>
+										
+										<section>
+											<header>
+												<h1 class="text-centered">Item interaction and objectives</h1>
+											</header>
+											<p></p>
+											<div class="gif-container">
+												<div class="gif-wrapper">
+													<img src="gifs/ItemPickupReplication.gif" loading="lazy" alt="GIF">
+													<div class="overlay">
+														<p>Item pickup and replication</p>
+													</div>
+												</div>
+											</div>
+										</section>
+
+										<section>
+											<header>
+												<h1 class="text-centered">Monster interaction with players</h1>
+											</header>
+											<div class="gif-container">
+												<div class="gif-wrapper">
+													<img src="gifs/EntityJumpscareMult.gif" loading="lazy" alt="GIF">
+													<div class="overlay">
+														<p>Monster interaction</p>
+													</div>
+												</div>
+											</div>
+										</section>
 
 										<section>
 											<header>
 												<h1 class="text-centered">Monsters response to sound in a co-op setting</h1>
 											</header>
-											<p>The monster in Capture Corp only responds to sound, in early stages of development it would respond and move to all sound sources created. This was an issue in a multiplyer environment as each player would produce sound, causing the monster to constantly change direction towards each sound source</p>
+											<p>In the early stages of Capture Corp's development, the monster responded to all sound sources created by players. This behavior caused issues in multiplayer environments, as the monster would constantly shift direction towards each player-generated sound, disrupting gameplay. To resolve this, each connected client's most recent sound position is stored in an array and then compared to calculate the shortest distance between the monster and the closest sound source. The monster then moves toward that position, adjusting only if a new, closer sound is detected.</p>
 											<div class="gif-container">
 												<div class="gif-wrapper">
 													<img src="gifs/AiDemonstration1.gif" loading="lazy" alt="GIF">
@@ -97,6 +135,7 @@
 													</div>
 												</div>
 											</div>
+											<p></p>
 											<div class="gif-container">
 												<div class="gif-wrapper">
 													<img src="gifs/AiDemonstration2.gif" loading="lazy" alt="GIF">
@@ -106,33 +145,16 @@
 												</div>
 											</div>
 										</section>
-										
+
 										<section>
 											<header>
-												<h1 class="text-centered">Monster spawn conditions</h1>
+												<h1 class="text-centered">Voice and text chat</h1>
 											</header>
-											<p></p>
 											<div class="gif-container">
 												<div class="gif-wrapper">
-													<img src="gifs/Spawndemonstration.gif" loading="lazy" alt="GIF">
+													<img src="gifs/AiDemonstration1.gif" loading="lazy" alt="GIF">
 													<div class="overlay">
-														<p>Conditional spawn based on height and nav map</p>
-													</div>
-												</div>
-											</div>
-											<div class="gif-container">
-												<div class="gif-wrapper">
-													<img src="gifs/ItemPickupReplication.gif" loading="lazy" alt="GIF">
-													<div class="overlay">
-														<p>Conditional spawn based on height and nav map</p>
-													</div>
-												</div>
-											</div>
-											<div class="gif-container">
-												<div class="gif-wrapper">
-													<img src="gifs/EntityJumpscareMult.gif" loading="lazy" alt="GIF">
-													<div class="overlay">
-														<p>Conditional spawn based on height and nav map</p>
+														<p>Ai sound prioritisation</p>
 													</div>
 												</div>
 											</div>
